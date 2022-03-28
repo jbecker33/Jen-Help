@@ -1,0 +1,35 @@
+---
+title: "Jennifer Help"
+author: "Jacob Becker"
+date: "3/28/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+setwd("C:\\Users\\19044\\Desktop\\Jen Help")
+```
+
+```{r}
+data <- read_csv("Coding for ads.csv")
+
+numbers <- read_csv("numbers.csv")
+```
+
+```{r}
+numbers[is.na(numbers)] <- 0
+```
+
+```{r}
+ggplot(numbers.1, aes(x = AD, y = total, fill = Var)) + geom_bar(stat = "identity")
+```
+
+```{r}
+numbers.1 <- numbers %>% 
+  pivot_longer(!AD, names_to = "Var", values_to = "total")
+```
+
